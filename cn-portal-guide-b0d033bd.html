@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>买球站 · 快速了解与使用</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #fafbfc;
+      color: #1c1e21;
+      line-height: 1.7;
+    }
+    .page {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    /* hero 区 */
+    .hero {
+      margin-bottom: 3.5rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #0c0d0e;
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      color: #4a4d52;
+      max-width: 520px;
+    }
+    /* 优势区 — 三卡片 */
+    .strengths {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+    }
+    .strength-card {
+      flex: 1 1 180px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.5rem 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.04);
+      border: 1px solid #e9ebee;
+      transition: box-shadow 0.2s ease;
+    }
+    .strength-card:hover {
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    }
+    .strength-card .emoji {
+      font-size: 1.6rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .strength-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #111;
+    }
+    .strength-card p {
+      font-size: 0.9rem;
+      color: #5b5f66;
+      line-height: 1.5;
+    }
+    /* 说明区 */
+    .section {
+      margin-bottom: 2.8rem;
+    }
+    .section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #e9ebee;
+      padding-bottom: 0.4rem;
+      color: #1b1d1f;
+    }
+    .section p {
+      margin-bottom: 1rem;
+    }
+    .section p:last-child {
+      margin-bottom: 0;
+    }
+    .inline-link {
+      color: #0066cc;
+      text-decoration: none;
+      border-bottom: 1px solid #b3d4fc;
+      transition: border-color 0.15s;
+    }
+    .inline-link:hover {
+      border-bottom-color: #0066cc;
+    }
+    /* FAQ 摘要 (简单列举) */
+    .faq-block {
+      background: #f4f6f9;
+      border-radius: 14px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .faq-block dt {
+      font-weight: 600;
+      margin-top: 1rem;
+      color: #1c1e21;
+    }
+    .faq-block dt:first-of-type {
+      margin-top: 0;
+    }
+    .faq-block dd {
+      margin-left: 0.2rem;
+      color: #3d4147;
+      font-size: 0.95rem;
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+    /* 底部链接 */
+    .footer-links {
+      border-top: 1px solid #dfe2e6;
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.9rem;
+      color: #6b7078;
+    }
+    .footer-links a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .footer-note {
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #8b909a;
+    }
+    /* 响应式 */
+    @media (max-width: 480px) {
+      .page { padding: 1.8rem 1.2rem 3rem; }
+      .hero h1 { font-size: 1.8rem; }
+      .strength-card { flex: 1 1 100%; }
+      .faq-block { padding: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- hero 区 -->
+    <div class="hero">
+      <h1>买球站，一眼分辨</h1>
+      <p>如果你在找一处可以直接浏览体育赛事相关信息的网站，这里用最少的干扰告诉你它是什么、适合谁。</p>
+    </div>
+
+    <!-- 优势区：三个核心特点 -->
+    <div class="strengths">
+      <div class="strength-card">
+        <span class="emoji">⚡</span>
+        <h3>直接访问</h3>
+        <p>打开即用，不绕弯子。页面结构清晰，信息层级明确，省去多余跳转。</p>
+      </div>
+      <div class="strength-card">
+        <span class="emoji">📋</span>
+        <h3>内容实在</h3>
+        <p>不堆砌空洞宣传，每个模块围绕使用场景展开，你很快就能判断是否匹配需求。</p>
+      </div>
+      <div class="strength-card">
+        <span class="emoji">🔒</span>
+        <h3>低调稳定</h3>
+        <p>界面克制，不弹窗、不诱导。重点放在信息可读性与操作直觉上。</p>
+      </div>
+    </div>
+
+    <!-- 说明区：从用户快速识别用途的角度 -->
+    <div class="section">
+      <h2>它解决什么问题</h2>
+      <p>
+        很多站点一进去就被广告或冗余元素包围，反而让人看不清核心功能。<a href="https://cn-portal-maiqiu.com" class="inline-link">买球站</a> 
+        则刻意保持极简——页面内容围绕体育赛事信息整合、快速浏览与基础导航设计。不论你是想了解当日赛程，还是查看某个联赛的简要数据，这里都提供了一条低阻力的路径。
+      </p>
+      <p>
+        对第一次接触的人来说，不需要注册或填写任何表单，就能通过清晰的内容分区找到自己关心的部分。这种“先看再决定”的逻辑，让使用前没有心理负担。
+      </p>
+    </div>
+
+    <!-- 场景提示：挑几个典型使用瞬间 -->
+    <div class="section">
+      <h2>适合这样的你</h2>
+      <p>· 你只是想知道某个比赛日有哪些焦点对阵，不想被推送干扰。</p>
+      <p>· 你习惯先扫一眼页面结构，再决定要不要深入浏览。</p>
+      <p>· 你偏好信息密度适中的界面，每个区块都有实际意义。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-block">
+      <h2 style="font-size:1.3rem; font-weight:600; margin-bottom:0.8rem; border-bottom:none; padding:0;">常见疑问 · 简短回答</h2>
+      <dl>
+        <dt>这个网站主要提供什么？</dt>
+        <dd>以体育赛事信息展示和导航为核心，结构简洁，方便快速定位内容。</dd>
+        <dt>需要注册或付费吗？</dt>
+        <dd>目前访问页面内容无需注册，也不涉及付费环节，直接使用即可。</dd>
+        <dt>内容更新频率如何？</dt>
+        <dd>页面会随赛事周期保持同步，你每次回来都能看到当日或当周的主要信息。</dd>
+      </dl>
+    </div>
+
+    <!-- 底部链接区 -->
+    <div class="footer-links">
+      <span>更多信息请访问 <a href="https://cn-portal-maiqiu.com">买球站</a></span>
+      <span>·</span>
+      <span style="cursor:default;">仅做场景说明</span>
+      <div class="footer-note">
+        本页为概览介绍，具体内容以站点实际展示为准。
+      </div>
+    </div>
+  </div>
+</body>
+</html>
