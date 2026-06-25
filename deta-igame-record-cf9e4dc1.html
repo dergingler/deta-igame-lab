@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指引 · 认识 ayx 的定位与场景</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background: linear-gradient(145deg, #fde9e0 0%, #fce1ce 35%, #f7cdb2 75%, #f0bc9b 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.8rem;
+            line-height: 1.7;
+        }
+
+        .content-card {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border-radius: 32px;
+            padding: 2.5rem 2.5rem 3rem;
+            box-shadow: 0 18px 36px rgba(170, 110, 70, 0.15),
+                        0 6px 12px rgba(160, 100, 60, 0.08);
+            transition: box-shadow 0.2s ease;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 550;
+            letter-spacing: 0.02em;
+            color: #4f2e1b;
+            margin-bottom: 0.4rem;
+            border-left: 6px solid #e2855c;
+            padding-left: 1.1rem;
+        }
+
+        .lead {
+            font-size: 1.08rem;
+            color: #6c4a33;
+            margin: 0.5rem 0 1.8rem 0;
+            padding-left: 1.7rem;
+            font-style: normal;
+            border-bottom: 1px dashed #e7c6b2;
+            padding-bottom: 0.85rem;
+        }
+
+        p {
+            color: #3d2a1d;
+            margin-bottom: 1.4rem;
+            font-size: 1.02rem;
+        }
+
+        .intro-highlight {
+            background: #f7dac4;
+            border-radius: 40px;
+            padding: 0.1rem 1rem 0.1rem 1.2rem;
+            display: inline-block;
+            font-weight: 480;
+            margin-bottom: 0.8rem;
+            color: #462b19;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+        }
+
+        blockquote {
+            background: #f5e5da;
+            border-left: 4px solid #d4794c;
+            padding: 0.8rem 1.4rem 0.8rem 1.6rem;
+            margin: 1.8rem 0 1.6rem 0;
+            border-radius: 0 20px 20px 0;
+            color: #4f321f;
+            font-style: normal;
+            font-size: 0.98rem;
+            box-shadow: 0 2px 6px rgba(120, 70, 40, 0.06);
+        }
+
+        blockquote strong {
+            color: #7f4c2e;
+            font-weight: 550;
+        }
+
+        .link-wrapper {
+            margin: 2rem 0 1.2rem 0;
+        }
+
+        .link-wrapper a {
+            display: inline-block;
+            background: #d4794c;
+            color: #fff8f2;
+            padding: 0.4rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 520;
+            font-size: 1.08rem;
+            letter-spacing: 0.4px;
+            box-shadow: 0 6px 14px rgba(193, 117, 67, 0.25);
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            border: 1px solid rgba(255, 215, 185, 0.4);
+        }
+
+        .link-wrapper a:hover {
+            background: #b75f36;
+            box-shadow: 0 8px 18px rgba(180, 95, 50, 0.32);
+            transform: translateY(-2px);
+        }
+
+        .link-wrapper a:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 8px rgba(160, 80, 40, 0.2);
+        }
+
+        .refined-note {
+            background: #f3e1d3;
+            border-radius: 28px;
+            padding: 0.9rem 1.6rem;
+            margin: 1.8rem 0 0.4rem 0;
+            color: #402b1c;
+            font-size: 0.96rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .refined-note span {
+            background: #c6794e;
+            color: #fffaf5;
+            padding: 0.1rem 0.9rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 520;
+            letter-spacing: 0.5px;
+        }
+
+        .faq-summary {
+            margin-top: 2.2rem;
+            padding-top: 1rem;
+            border-top: 2px dotted #dbb5a0;
+        }
+
+        .faq-item {
+            margin-bottom: 0.9rem;
+        }
+
+        .faq-q {
+            font-weight: 560;
+            color: #5a3622;
+            font-size: 1.02rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-a {
+            color: #4d3425;
+            margin-left: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e3c8b6;
+            margin: 1.6rem 0 1.2rem;
+            opacity: 0.5;
+        }
+
+        .footer-tip {
+            text-align: right;
+            font-size: 0.82rem;
+            color: #846b59;
+            margin-top: 0.3rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            .content-card {
+                padding: 1.8rem 1.4rem 2rem;
+                border-radius: 24px;
+            }
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+            .lead {
+                font-size: 0.98rem;
+                padding-left: 0.8rem;
+            }
+            .link-wrapper a {
+                font-size: 1rem;
+                padding: 0.35rem 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="content-card">
+
+    <h1>一个名字，一组可能</h1>
+    <div class="lead">关于 <strong>ayx</strong> 你想快速确认的几件事 · 用途与边界</div>
+
+    <p>
+        当你第一次看到 <strong>ayx</strong> 这三个字母时，可能会先琢磨它代表什么。一个项目代号？一个工具缩写？还是一种特定服务的标签？实际上，<strong>ayx</strong> 更多时候被当作一个简洁的标识，指向某个具体的线上功能区域，或者说，一个你可以直接访问的站点。它本身不承载夸张的承诺，只是一个入口名字——你需要根据它的实际内容来判断它是否贴合自己的需求。
+    </p>
+
+    <div class="intro-highlight">✦ 适用场景快速识别</div>
+
+    <p>
+        如果你正在寻找一个以 <strong>ayx</strong> 作为标识的网页服务，那么这个站点很可能就是你要找的。它的设计意图通常偏向功能性，不绕弯子。你可以通过访问 <a href="https://deta-igame.com.cn" style="color:#a6522a; text-decoration:underline; font-weight:500;">ayx</a> 来直接查看其界面与功能模块。注意，这里的链接文本就是 <strong>ayx</strong> 本身，它只是告诉你目的地的名字，而不包含任何“前往”“查看”之类的引导词——你需要自己决定是否值得花时间探索。
+    </p>
+
+    <blockquote>
+        <strong>一点引用提示：</strong> 判断一个网站是否适合自己，最可靠的方式是亲自看一遍它的页面结构、文案风格和功能入口。不要仅凭名字或外部描述就做决定。<strong>ayx</strong> 作为一个标识，它的价值在于实际内容，而不是名字本身。
+    </blockquote>
+
+    <p>
+        从结构上看，这类站点往往遵循比较直接的信息层级：首页会说明核心用途，然后根据需求划分几个主要区块。你可能看不到过度的营销修饰，更多的是功能引导和说明文字。如果你偏好简洁、克制的界面，那么它或许会让你觉得清爽。
+    </p>
+
+    <div class="link-wrapper">
+        <a href="https://deta-igame.com.cn">ayx</a>
+    </div>
+
+    <p>
+        上面这个链接指向的就是 <strong>ayx</strong> 对应的网站。你可以先把它看作一个快捷书签，不必立刻点开，而是等自己需要确认某个功能或查看具体内容时再使用。记住，一个链接的唯一作用就是把你送到对应的地址，至于地址里有什么，需要你自己去阅读和判断。
+    </p>
+
+    <div class="refined-note">
+        <span>✦</span> 访问句备忘：如果你已经在别处看到过关于 <strong>ayx</strong> 的片段信息，想亲自验证其真实用途，可以直接通过上文链接进入。不需要额外搜索，不需要中转页面。
+    </div>
+
+    <hr>
+
+    <div class="faq-summary">
+        <div class="faq-item">
+            <div class="faq-q">· ayx 是一个产品还是一个平台？</div>
+            <div class="faq-a">取决于该站点当下提供的内容。目前它更接近一个带有特定功能聚合的页面，你可以把它理解为一个名字下的具体实现，而非某种泛称。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">· 我需要注册或登录才能看到主要内容吗？</div>
+            <div class="faq-a">首次访问时，首页通常会展示出足够的信息让你判断是否有必要进一步操作。具体请以实际页面呈现为准。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">· 这个页面跟其他同类站点有什么不同？</div>
+            <div class="faq-a">它的特点在于克制——没有铺满屏幕的弹窗或诱导按钮，更注重让你自己通过阅读和点击来建立认知。</div>
+        </div>
+    </div>
+
+    <hr style="margin-top:2rem;">
+
+    <div class="footer-tip">
+        <span style="background:#e2956b; color:#fcf3ec; padding:0.1rem 0.7rem; border-radius:16px; font-size:0.7rem; letter-spacing:0.3px;">简明识别卡</span> · 先看内容，再下判断
+    </div>
+
+</div>
+
+</body>
+</html>
